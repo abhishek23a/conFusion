@@ -31,7 +31,7 @@
             <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> contacts</a><li>
          </ul>
          <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="loginButton">
               <span class="fa fa-sign-in"><span>Login
             </a>
          </span>
@@ -89,7 +89,7 @@
                 <img src="img/logo.png" class="img-fluid">
               </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                  <a data-toggle="modal" data-target="#table" type="button" class="btn btn-block btn-sm btn-warning" data-html="true" title="Or call us at <br> <strong>+85212345678</strong>" data-placement="bottom">
+                  <a id="reserveButton" class="btn btn-block btn-sm btn-warning" >
                     Reserve Table
                   </a>
                 </div>
@@ -192,7 +192,7 @@
               </div>
             </div>
         </div>
-        <div id="table" class="modal fade" role="dialog">
+        <div id="reservetableform" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
               <div class="modal-content">
                 <div class="modal-header">
@@ -291,7 +291,7 @@
                         <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
                     </div>
                 </div>
-           </div>0.
+           </div>
            <div class="row justify-content-center">
                 <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
@@ -303,25 +303,8 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('#mycarousel').carousel({interval: 2000});
-      $('#carouselButton').click(function() {
-        if ($('#carouselButton').children('span').hasClass('fa-pause')){
-          $('#mycarousel').carousel('pause');
-          $('#carouselButton').children('span').removeClass('fa-pause');
-          $('#carouselButton').children('span').addClass('fa-play');
-        }
-       else if ($('#carouselButton').children('span').hasClass('fa-play')){
-           $('#mycarousel').carousel('cycle');
-           $('#carouselButton').children('span').removeClass('fa-play');
-           $('#carouselButton').children('span').addClass('fa-pause');
-      }
+  <script src="js/scripts.js">
 
-      });
-
-
-    });
   </script>
 
 </body>
